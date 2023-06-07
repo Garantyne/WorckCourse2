@@ -24,10 +24,8 @@ public class JavaQuestionService implements QuestionService{
 
     @Override
     public Question remove(Question question) {
-        for(var v : chtoGdeKogda){
-            if(v.equals(question)){
-                chtoGdeKogda.remove(question);
-            }
+        if(chtoGdeKogda.contains(question)){
+            chtoGdeKogda.remove(question);
         }
         return question;
     }
@@ -50,3 +48,4 @@ public class JavaQuestionService implements QuestionService{
         return null;
     }
 }
+
