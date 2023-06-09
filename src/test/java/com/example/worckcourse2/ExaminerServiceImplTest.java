@@ -37,6 +37,7 @@ public class ExaminerServiceImplTest {
 
         when(questionService.getRandomQuestion()).thenReturn(question1, question2, question3);
 
+
         Collection<Question> questions = examinerService.getQuestions(3);
 
         assertEquals(questionSet, questions);

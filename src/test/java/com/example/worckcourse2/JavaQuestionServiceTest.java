@@ -10,10 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class JavaQuestionServiceTest {
     JavaQuestionService javaQuestionService;
 
-    @BeforeEach
-    public void setUp() {
-        javaQuestionService = new JavaQuestionService();
-    }
+
     @Test
     public void add(){
         Question testResult = javaQuestionService.add("qwer","rewq");

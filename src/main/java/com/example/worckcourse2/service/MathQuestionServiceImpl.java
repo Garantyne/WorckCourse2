@@ -5,22 +5,22 @@ import com.example.worckcourse2.repository.QuestionRepository;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Random;
 
 @Service
-public class JavaQuestionService implements QuestionService{
-    @Qualifier("javaQuestionRepository")
-    private  final QuestionRepository questionRepository;
+public class MathQuestionServiceImpl implements QuestionService{
+    @Qualifier("mathJavaQuestionrepository")
+    private final QuestionRepository questionRepository;
 
-    public JavaQuestionService(QuestionRepository questionRepository) {
+    public MathQuestionServiceImpl(QuestionRepository questionRepository) {
         this.questionRepository = questionRepository;
     }
 
     @Override
     public Question add(String question, String answer) {
-
-        questionRepository.add(new Question(question,answer));
-        return new Question(question,answer);
+        questionRepository.add(new Question(question, answer));
+        return new Question(question, answer);
     }
 
     @Override
@@ -55,4 +55,3 @@ public class JavaQuestionService implements QuestionService{
         return null;
     }
 }
-
