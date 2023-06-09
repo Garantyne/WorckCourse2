@@ -37,7 +37,7 @@ public class Question  {
 
     @Override
     public String toString() {
-        return "Уважаемые знатоки вам вопрос!!" + question + " ответом на него будет " + answer;
+        return "\nУважаемые знатоки вам вопрос!!" + question + " ответом на него будет " + answer;
     }
 
 }
